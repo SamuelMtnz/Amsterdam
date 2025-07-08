@@ -202,5 +202,3 @@ print(f'\nVariables en el DF: {df_house_final.columns.tolist()}')
 
 # Guardar DB
 df_house_final.to_csv('datos_procesados.csv', index=False)
-
-
