@@ -85,40 +85,6 @@ mejor_modelo = max(resultados, key=lambda x: resultados[x]['R²'])
 print(f"\n🏆 Mejor modelo: {mejor_modelo} (R² = {resultados[mejor_modelo]['R²']:.3f})")
 
 
-
-# --------------------------------------------
-# Optimizar hiperparámetros RabdomizedSearch
-# --------------------------------------------
-# from scipy.stats import randint
-
-# param_dist = {
-#     "n_estimators": randint(100, 1000),
-#     "max_depth": [None, 5, 10, 15, 20, 30],
-#     "min_samples_split": randint(2, 20),
-#     "min_samples_leaf": randint(1, 10),  # ✅ Nuevo parámetro importante
-#     "max_features": ['sqrt', 'log2']
-# }
-
-# rf = RandomForestRegressor(random_state=42)
-# random_search = RandomizedSearchCV(
-#     rf, param_dist,
-#     random_state = 42,
-#     n_iter=10,  # Número de combinaciones a probar
-#     cv=5,       # Validación cruzada de 5 folds
-#     scoring="r2"
-# )
-
-# random_search.fit(X_train, y_train)
-
-# # Mejores parámetros
-# print(f"\n🎯 Mejores parámetros: {random_search.best_params_}")
-
-# # Evaluar modelo optimizado
-# mejor_rf_rs = random_search.best_estimator_
-# y_pred_rf = mejor_rf_rs.predict(X_test)
-# print(f"R² optimizado: {r2_score(y_test, y_pred_rf):.2f}")
-
-
 # --------------------------------------------
 # Optimizar hiperparámetros GridSearch
 # --------------------------------------------
