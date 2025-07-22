@@ -9,7 +9,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 #Importamos DB
-df_house = pd.read_csv('C:\\Users\\Samu\\Desktop\\Nodd3r\\Proyectos\\1_Amsterdam\\HousingPrices-Amsterdam-August-2021.csv')
+df_house = pd.read_csv('Amsterdam\HousingPrices-Amsterdam-August-2021.csv')
     
 # Guardamos copia para modificaciones
 df_house_copy = df_house.copy()
