@@ -98,12 +98,12 @@ param_grid = {
 
 rf = RandomForestRegressor(random_state=42)
 grid_search = GridSearchCV(
-    estimator=rf, 
-    param_grid=param_grid,
-    cv=5,                     # 5-fold cross validation
-    scoring='r2',             # Optimizar para R²
-    verbose=1,                # Mostrar progreso
-    n_jobs=-1                 # Usar todos los núcleos del CPU
+    estimator = rf, 
+    param_grid = param_grid,
+    cv = 5,                     # 5-fold cross validation
+    scoring = 'r2',             # Optimizar para R²
+    verbose = 1,                # Mostrar progreso
+    n_jobs = -1                 # Usar todos los núcleos del CPU
 )
 
 grid_search.fit(X_train, y_train)
