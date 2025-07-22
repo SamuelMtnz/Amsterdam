@@ -68,7 +68,7 @@ for nombre ,modelo in modelos.items():
     mae = mean_absolute_error(y_test, y_pred)
     
     # Cross validation
-    cv_scores = cross_val_score(modelo, X_train, y_train, cv=5, scoring='r2')
+    cv_scores = cross_val_score(modelo, X_train, y_train, cv = 5, scoring = 'r2')
     avg_r2_cv = np.mean(cv_scores)    
     
     resultados[nombre] = {"MSE": mse, "R²": r2, "MAE": mae, 'R² CV': avg_r2_cv}
