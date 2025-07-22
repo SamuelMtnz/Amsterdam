@@ -119,14 +119,14 @@ print(f"R² optimizado: {r2_score(y_test, y_pred_rf):.2f}")
 # Analizar Residuos
 residuals = y_test - y_pred_rf
 plt.scatter(y_pred, residuals)
-plt.axhline(y=0, color='r', linestyle='-')
+plt.axhline(y = 0, color = 'r', linestyle = '-')
 plt.title("Análisis de residuos")
 plt.xlabel("Predicciones")
 plt.ylabel("Residuos")
 plt.show()
 
 plt.figure(figsize=(10, 6))
-sns.histplot(residuals, kde=True, bins=30)
+sns.histplot(residuals, kde = True, bins = 30)
 plt.title("Distribución de Residuos")
 plt.xlabel("Residuos")
 plt.show()
@@ -141,17 +141,13 @@ from pathlib import Path
 MODELS_DIR = Path("models")
 MODELS_DIR.mkdir(exist_ok=True, parents=True)
 
-# 1. Guardar el mejor modelo general
+#  Guardar el mejor modelo general
 joblib.dump(mejor_rf, MODELS_DIR / "modelo_general.pkl")
 
-# 2. Guardar el escalador global (fit con todos los datos)
-# scaler_global = StandardScaler().fit(X)  # Ajustar con TODOS los datos
-# joblib.dump(scaler_global, MODELS_DIR / "escalador_global.pkl")
 
-# 3. Guardar información de características (importante para Streamlit)
+# Guardar información de características (importante para Streamlit)
 caracteristicas = list(X.columns)
 joblib.dump(caracteristicas, MODELS_DIR / "caracteristicas.pkl")
 
 print("✅ Modelos guardados:")
 print(f"- Modelo general: models/modelo_general.pkl")
-# print(f"- Escalador global: models/escalador_global.pkl")
