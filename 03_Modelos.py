@@ -133,7 +133,7 @@ plt.show()
 
 
 
-# Después de la optimización con GridSearch/RandomizedSearch
+# Importar librerías para directorios
 import joblib
 from pathlib import Path
 
@@ -141,11 +141,11 @@ from pathlib import Path
 MODELS_DIR = Path("models")
 MODELS_DIR.mkdir(exist_ok=True, parents=True)
 
-#  Guardar el mejor modelo general
+# Guardar el mejor modelo general
 joblib.dump(mejor_rf, MODELS_DIR / "modelo_general.pkl")
 
 
-# Guardar información de características (importante para Streamlit)
+# Guardar información de características
 caracteristicas = list(X.columns)
 joblib.dump(caracteristicas, MODELS_DIR / "caracteristicas.pkl")
 
