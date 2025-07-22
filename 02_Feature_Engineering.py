@@ -123,8 +123,8 @@ outliers_price_area = df_house_copy[(df_house_copy['outlier_Price'] == 1) & (df_
 
 # Gráfico de dispersión
 plt.figure(figsize=(10, 6))
-sns.scatterplot(x='Area', y='Price', data=df_house_copy, color='blue', label='Datos Normales')
-sns.scatterplot(x='Area', y='Price', data=outliers_price_area, color='red', label='Outliers en Ambos')
+sns.scatterplot(x = 'Area', y = 'Price', data = df_house_copy, color = 'blue', label = 'Datos Normales')
+sns.scatterplot(x = 'Area', y = 'Price', data = outliers_price_area, color = 'red', label = 'Outliers en Ambos')
 plt.title('Relación entre Area y Price con Outliers Destacados')
 plt.legend()
 plt.show()
@@ -153,12 +153,12 @@ for columna in out_col.keys():
             radius = 2,
             color = colores_out[columna],
             fill = True,
-            fill_color=colores_out[columna],
-            fill_opacity=0.7,
+            fill_color = colores_out[columna],
+            fill_opacity = 0.7,
             popup = f"{columna}: {row[columna]}"
         ).add_to(mapa_out)
 
-#Guardamos mapa, si estamos en notebook con poner mapa_out sale automáticamente
+#Guardamos mapa
 mapa_out.save('mapa_outliers.html')
 import IPython 
 IPython.display.HTML(mapa_out._repr_html_())
