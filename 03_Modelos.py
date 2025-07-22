@@ -125,7 +125,7 @@ plt.xlabel("Predicciones")
 plt.ylabel("Residuos")
 plt.show()
 
-plt.figure(figsize=(10, 6))
+plt.figure(figsize = (10, 6))
 sns.histplot(residuals, kde = True, bins = 30)
 plt.title("Distribución de Residuos")
 plt.xlabel("Residuos")
