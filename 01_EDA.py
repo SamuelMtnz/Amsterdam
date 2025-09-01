@@ -107,6 +107,7 @@ plt.show()
 
 
 
+
 # from pandas_profiling  import ProfileReport
 
 # profile_report = ProfileReport(df_house, title = "Reporte EDA", explorative = True)
