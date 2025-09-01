@@ -21,13 +21,13 @@ from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from xgboost import XGBRegressor
 from sklearn.svm import SVR
 
-import joblib
-from scipy.stats import randint
 
 # Cross Validation y Pipelines
 from sklearn.model_selection import cross_val_score, KFold
 from sklearn.pipeline import make_pipeline
 
+import joblib
+from scipy.stats import randint
 
 # Cargar DB
 import pandas as pd
