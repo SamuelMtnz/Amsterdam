@@ -1,14 +1,14 @@
-#Importamos librerías
+# Importamos librerías
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder, StandardScaler, MinMaxScaler
 from scipy.stats import skew
 
-#Librerías gráficos
+# Librerías gráficos
 import seaborn as sns 
 import matplotlib.pyplot as plt
 
-#Importamos DB
+# Importamos DB
 df_house = pd.read_csv('Amsterdam\HousingPrices-Amsterdam-August-2021.csv')
     
 # Guardamos copia para modificaciones
@@ -129,7 +129,7 @@ plt.title('Relación entre Area y Price con Outliers Destacados')
 plt.legend()
 plt.show()
 
-#Representación en mapa
+# Representación en mapa
 import folium
 from folium.plugins import HeatMap
 import numpy as np
