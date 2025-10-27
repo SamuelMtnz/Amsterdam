@@ -9,7 +9,7 @@ import os
 # Cargamos archivo
 try:
         
-    df_house = pd.read_csv('Amsterdam\HousingPrices-Amsterdam-August-2021.csv')
+    df_house = pd.read_csv('Amsterdam\data\HousingPrices-Amsterdam-August-2021.csv')
     
     print('\n ✅ Datos cargados correctamente \n Vista previa: ')
     print(df_house.head())
