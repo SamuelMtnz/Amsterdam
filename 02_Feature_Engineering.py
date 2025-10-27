@@ -159,7 +159,7 @@ for columna in out_col.keys():
         ).add_to(mapa_out)
 
 #Guardamos mapa
-mapa_out.save('mapa_outliers.html')
+mapa_out.save('Graphs\mapa_outliers.html')
 import IPython 
 IPython.display.HTML(mapa_out._repr_html_())
 
@@ -201,4 +201,4 @@ df_house_final = df_house_copy[['Area', 'Price', 'Room', 'Room_Area', 'Lon', 'La
 print(f'\nVariables en el DF: {df_house_final.columns.tolist()}')
 
 # Guardar DB
-df_house_final.to_csv('datos_procesados.csv', index=False)
+df_house_final.to_csv('Amsterdam\data\datos_procesados.csv', index=False)

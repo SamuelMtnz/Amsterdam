@@ -14,7 +14,7 @@ import joblib
 
 # Cargar DB
 
-df_house_final = pd.read_csv('datos_procesados.csv')
+df_house_final = pd.read_csv('Amsterdam\data\datos_procesados.csv')
 
 df_house_cluster = df_house_final.copy()
 
@@ -51,7 +51,7 @@ plt.xlabel("Longitud (Lon)", fontsize = 12)
 plt.ylabel("Latitud (Lat)", fontsize = 12)
 plt.legend()
 plt.grid(True, linestyle = "--", alpha = 0.5)
-plt.savefig("zonas_geograficas.png")
+plt.savefig("Graphs/zonas_geograficas.png")
 plt.show()
 
 precio_por_zona = df_house_cluster.groupby("Zona")["Price"].mean().reset_index()
@@ -61,7 +61,7 @@ sns.barplot(x = "Zona", y = "Price", data = precio_por_zona, palette = colores)
 plt.title("Precio Promedio por Zona Geográfica")
 plt.xlabel("Zona")
 plt.ylabel("Precio Medio (€)")
-plt.savefig("precio_por_zona.png")
+plt.savefig("Graphs/precio_por_zona.png")
 plt.show()
 
 print(df_house_cluster["Zona"].value_counts())
@@ -131,7 +131,7 @@ for zone in df_house_cluster["Zona"].unique():
       print(f"- MAE: {metrics_cluster['MAE']:.2f}")
 
 # Guardamos DB
-df_house_cluster.to_csv('datos_cluster.csv', index=False)
+# df_house_cluster.to_csv('datos_cluster.csv', index=False)
 
 
 
@@ -139,7 +139,7 @@ import joblib
 from pathlib import Path
 
 # Crear directorio para modelos
-MODELS_DIR = Path("models")
+MODELS_DIR = Path("Amsterdam\models")
 MODELS_DIR.mkdir(exist_ok=True, parents=True)
 
 # Guardar modelo KMeans
@@ -171,5 +171,7 @@ else:
     print("⚠️ Advertencia: No hay datos para la Zona 0")
 
 # Guardar datos con clusters para mapas
-df_house_cluster.to_csv('datos_cluster.csv', index = False)
-print("✅ Datos con clusters guardados")
+df_house_cluster.to_csv('Amsterdam\data\datos_cluster.csv', index = False)
+
+
+print(df_house_cluster.columns.tolist())
