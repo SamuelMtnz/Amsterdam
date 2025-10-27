@@ -139,7 +139,7 @@ import joblib
 from pathlib import Path
 
 # Crear directorio para modelos
-MODELS_DIR = Path("models")
+MODELS_DIR = Path("Amsterdam/models")
 MODELS_DIR.mkdir(exist_ok=True, parents=True)
 
 # Guardar el mejor modelo general

@@ -7,7 +7,8 @@ from folium.plugins import HeatMap
 import numpy as np
 from sklearn.cluster import KMeans
 
-df_house_cluster = pd.read_csv("datos_cluster.csv")
+df_house_cluster = pd.read_csv("Amsterdam\data\datos_cluster.csv")
+
 
 # --------------------------------------------
 #               Mapa por cluster

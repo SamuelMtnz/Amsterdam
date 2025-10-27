@@ -105,10 +105,3 @@ sns.pairplot(df_house)
 
 plt.show()
 
-
-
-
-# from pandas_profiling  import ProfileReport
-
-# profile_report = ProfileReport(df_house, title = "Reporte EDA", explorative = True)
-# profile_report.to_notebook_iframe()
