@@ -88,6 +88,7 @@ print(f"\n🏆 Mejor modelo: {mejor_modelo} (R² = {resultados[mejor_modelo]['R�
 # --------------------------------------------
 # Optimizar hiperparámetros GridSearch
 # --------------------------------------------
+
 param_grid = {
     "n_estimators": [100, 200, 300, 500],
     "max_depth": [None, 10, 20, 30],
