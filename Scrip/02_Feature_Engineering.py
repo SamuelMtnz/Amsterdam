@@ -8,6 +8,9 @@ from scipy.stats import skew
 import seaborn as sns 
 import matplotlib.pyplot as plt
 
+import joblib
+from pathlib import Path
+
 # Importamos DB
 df_house = pd.read_csv('Amsterdam\data\HousingPrices-Amsterdam-August-2021.csv')
     
@@ -159,7 +162,7 @@ for columna in out_col.keys():
         ).add_to(mapa_out)
 
 #Guardamos mapa
-mapa_out.save('Graphs\mapa_outliers.html')
+mapa_out.save('Amsterdam/Graphs/mapa_outliers.html')
 import IPython 
 IPython.display.HTML(mapa_out._repr_html_())
 

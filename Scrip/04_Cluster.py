@@ -51,7 +51,7 @@ plt.xlabel("Longitud (Lon)", fontsize = 12)
 plt.ylabel("Latitud (Lat)", fontsize = 12)
 plt.legend()
 plt.grid(True, linestyle = "--", alpha = 0.5)
-plt.savefig("Graphs/zonas_geograficas.png")
+plt.savefig("Amsterdam/Graphs/zonas_geograficas.png")
 plt.show()
 
 precio_por_zona = df_house_cluster.groupby("Zona")["Price"].mean().reset_index()
@@ -61,7 +61,7 @@ sns.barplot(x = "Zona", y = "Price", data = precio_por_zona, palette = colores)
 plt.title("Precio Promedio por Zona Geográfica")
 plt.xlabel("Zona")
 plt.ylabel("Precio Medio (€)")
-plt.savefig("Graphs/precio_por_zona.png")
+plt.savefig("Amsterdam/Graphs/precio_por_zona.png")
 plt.show()
 
 print(df_house_cluster["Zona"].value_counts())
@@ -130,8 +130,7 @@ for zone in df_house_cluster["Zona"].unique():
       print(f"- R²: {metrics_cluster['R2']:.2%}")
       print(f"- MAE: {metrics_cluster['MAE']:.2f}")
 
-# Guardamos DB
-# df_house_cluster.to_csv('datos_cluster.csv', index=False)
+
 
 
 

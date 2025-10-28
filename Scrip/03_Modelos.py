@@ -31,7 +31,7 @@ from scipy.stats import randint
 
 # Cargar DB
 import pandas as pd
-df_house_final = pd.read_csv('datos_procesados.csv')
+df_house_final = pd.read_csv('Amsterdam\data\datos_procesados.csv')
 
 
 
@@ -101,10 +101,10 @@ rf = RandomForestRegressor(random_state=42)
 grid_search = GridSearchCV(
     estimator = rf, 
     param_grid = param_grid,
-    cv = 5,                     # 5-fold cross validation
-    scoring = 'r2',             # Optimizar para R²
-    verbose = 1,                # Mostrar progreso
-    n_jobs = -1                 # Usar todos los núcleos del CPU
+    cv = 5,                     
+    scoring = 'r2',             
+    verbose = 1,                
+    n_jobs = -1                 
 )
 
 grid_search.fit(X_train, y_train)
