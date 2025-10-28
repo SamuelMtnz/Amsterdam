@@ -39,6 +39,7 @@ rows_duplicated = df_house.duplicated()
 n_rows_duplicated = df_house.duplicated().sum()
 print(f'\n 🔍 Columnas duplicadas: {n_rows_duplicated}')
 
+
 # Descripción gráfica
 
 n_col = df_house.select_dtypes(include = ['float64', 'int64']).columns
@@ -55,6 +56,7 @@ for i, col in enumerate(n_col, 1):
 plt.tight_layout()
 plt.show()
 
+
 # Outliers, creamos un a variable que recoja las dos características que queremos analizar
 
 
@@ -69,6 +71,7 @@ for i, col in enumerate(['Area', 'Room'], 1):
 
 plt.tight_layout()
 plt.show()
+
 
 # Distribución de las casas por precio, área y número de habitaciones
 
@@ -89,6 +92,7 @@ plt.legend(title = "Room",
 
 plt.show()
 
+
 # Correlaciones
 
 plt.figure(figsize = (12, 6))
@@ -99,9 +103,9 @@ plt.title("Mapa de calor de Correlaciones")
 
 plt.show()
 
+
 # Pairplot
 
 sns.pairplot(df_house)
 
 plt.show()
-

@@ -12,6 +12,7 @@ from sklearn.preprocessing import StandardScaler
 from xgboost import XGBRegressor
 import joblib
 
+
 # Cargar DB
 
 df_house_final = pd.read_csv('Amsterdam\data\datos_procesados.csv')

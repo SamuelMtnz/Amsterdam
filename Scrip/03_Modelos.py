@@ -29,6 +29,7 @@ from sklearn.pipeline import make_pipeline
 import joblib
 from scipy.stats import randint
 
+
 # Cargar DB
 import pandas as pd
 df_house_final = pd.read_csv('Amsterdam\data\datos_procesados.csv')

@@ -167,7 +167,6 @@ import IPython
 IPython.display.HTML(mapa_out._repr_html_())
 
 
-
 # WINSORIZACIÓN
 
 # Se sustituyen los valores por percentil más alto y más bajo
