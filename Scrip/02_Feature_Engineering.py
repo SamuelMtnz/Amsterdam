@@ -8,8 +8,6 @@ from scipy.stats import skew
 import seaborn as sns 
 import matplotlib.pyplot as plt
 
-import joblib
-from pathlib import Path
 
 # Importamos DB
 df_house = pd.read_csv('Amsterdam\data\HousingPrices-Amsterdam-August-2021.csv')
