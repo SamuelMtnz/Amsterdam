@@ -73,11 +73,8 @@ App Streamlit para explorar y predecir precios de viviendas en Ámsterdam en fun
 - Centroides de cada zona
 
 ## **🤝 Contribuciones**
-### Las contribuciones son bienvenidas. Áreas de mejora:
-- Añadir más modelos de ML
-- Implementar Deep Learning
-- Añadir análisis temporal
-- Integrar más fuentes de datos
+### Las contribuciones son bienvenidas.
+Ponerse en contacto con el autor
 
 ## **📄 Licencia**
 Este proyecto está bajo la Licencia MIT.
