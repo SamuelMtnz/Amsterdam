@@ -27,7 +27,7 @@ st.set_page_config(
 st.title("🏠 Predicción y Exploración de Precios en Ámsterdam")
 st.markdown("""
 Explora propiedades y predice precios en diferentes zonas de Ámsterdam.
-**Zona 0** (centro) usa un modelo especializado, otras zonas usan el modelo general.
+**Zona 0** usa un modelo especializado, el resto de zonas usan el modelo general.
 """)
 
 # Cargar modelos
