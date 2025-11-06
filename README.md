@@ -1,6 +1,9 @@
 # 🏠 Amsterdam Housing Price Predictor
 App Streamlit para explorar y predecir precios de viviendas en Ámsterdam en función de la zona donde se encuentran, los metros cuadrados de la vivienda y el número de habitaciones de la misma.
 
+## 🌐 App
+- **URL App desplegada:** [Predicción Amsterdam](https://prediccion-precios-amsterdam.streamlit.app)
+
 ## 🚀 Características Principales
 
 - **🔍 Exploración Interactiva**: Filtra y visualiza propiedades en mapas interactivos
